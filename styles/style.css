@@ -6,5 +6,14 @@ Date: Feb 17 -
 
 * {
   background-color: darksalmon;
-  /* font-family: ; */
+  font-family: "Jacques Francois";
+  width: 1520px;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
