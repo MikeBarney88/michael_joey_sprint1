@@ -1,0 +1,79 @@
+/* 
+Desc: Sprint 1
+Members: Michael Barney, Joey Thomas
+Date: Feb 17 - 
+*/
+
+* {
+  background-color: white;
+  font-family: "Jacques Francois";
+}
+
+body {
+  width: 1512;
+}
+
+.grid-container {
+  display: grid;
+  width: 1512px;
+  margin: auto;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: minmax(40px, auto);
+  border: 3px solid #ffc300;
+}
+
+.grid-header {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+}
+
+.grid-navleft {
+  display: grid;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  padding: 15px 0px 15px 0px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: lightgray;
+  justify-items: center;
+  font-size: 1.6em;
+  margin-top: 15px;
+}
+
+.grid-navright {
+  display: grid;
+  grid-column: 4/5;
+  grid-row: 2/3;
+  background-color: lightgray;
+  padding: 15px 0px 15px 0px;
+  border: 1px solid black;
+  border-radius: 10px;
+  justify-items: center;
+  font-size: 1.6em;
+  margin-top: 15px;
+}
+
+a:link,
+a:visited {
+  background-color: lightgray;
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffc300;
+  text-decoration: none;
+}
+
+footer {
+  display: grid;
+  grid-column: 1/-1;
+  grid-row: auto;
+  color: #ffc300;
+  font-size: x-large;
+  margin-top: 30px;
+  padding: 20px;
+  justify-content: center;
+  background-color: black;
+}
