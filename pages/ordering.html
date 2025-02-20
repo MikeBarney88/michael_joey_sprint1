@@ -27,7 +27,7 @@
       <div>
         <label for="oPhone">Phone Num:</label>
 
-        <input type="text" name="oPhone" id="oPhone">
+        <input type="text" name="oPhone" id="oPhone" placeholder="(###) ###-####">
       </div>
 
       <div>
@@ -39,7 +39,52 @@
       <div>
         <label for="oCredit">Credit Card:</label>
 
-        <input type="text" name="oCredit" id="oCredit">
+        <input type="text" name="oCredit" id="oCredit" placeholder="####-####-####-####">
+      </div>
+
+      <div>
+        <p>Your Order:</p>
+
+        <div>
+          <label for="oItemPick">Choose Item(s):</label>
+          
+          <br>
+
+          <select name="oItemPick" id="oItemPick">
+            <option selected disabled>-- Menu Options --</option>
+            <optgroup label="Breakfast">
+              <option value="crepe">Breakfast Crêpe</option>
+              <option value="eoat">Eggs on Avacado Toast</option>
+              <option value=""></option>
+            </optgroup>
+
+            <optgroup label="Lunch">
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+            </optgroup>
+
+            <optgroup label="Beverages">
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+            </optgroup>
+          </select>
+
+          <input type="number" min="1" placeholder="Quantity" id="oQuantity">
+        </div>
+
+        <ul id="ordDsp"></ul>
+      </div>
+
+      <div>
+        <p id="oSubtotal"></p>
+        <p id="oHST"></p>
+        <p id="oTotal"></p>
+      </div>
+
+      <div>
+        <button id="oCalc">Calculate Total</button>
       </div>
 
       <div>
