@@ -16,7 +16,7 @@
 
     <!-- Form for script testing, feel free to remove. -->
      <form id="oForm">
-      <div id="oError"></div>
+      <div id="oError">&nbsp;</div>
 
       <div>
         <label for="oName">Full Name:</label>
@@ -25,7 +25,7 @@
       </div>
 
       <div>
-        <label for="oPhone">Phone Num:</label>
+        <label for="oPhone">Phone Number:</label>
 
         <input type="text" name="oPhone" id="oPhone" placeholder="(###) ###-####">
       </div>
@@ -51,27 +51,29 @@
           <br>
 
           <select name="oItemPick" id="oItemPick">
-            <option selected disabled>-- Menu Options --</option>
+            <option selected disabled value="defaultPick">-- Menu Options --</option>
             <optgroup label="Breakfast">
               <option value="crepe">Breakfast Crêpe</option>
               <option value="eoat">Eggs on Avacado Toast</option>
-              <option value=""></option>
+              <option value="smoothie">Smoothie Bowl</option>
             </optgroup>
 
             <optgroup label="Lunch">
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
+              <option value="salad">Garden Salad</option>
+              <option value="bagel">Bagel Sandwich</option>
+              <option value="ramen">Bowl of Ramen</option>
             </optgroup>
 
             <optgroup label="Beverages">
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
+              <option value="coffee">Coffee</option>
+              <option value="mocha">Café Mocha Latte</option>
+              <option value="herbal">Herbal Tea</option>
             </optgroup>
           </select>
 
           <input type="number" min="1" placeholder="Quantity" id="oQuantity">
+
+          <button id="oFormATO">Add to Order</button>
         </div>
 
         <ul id="ordDsp"></ul>
