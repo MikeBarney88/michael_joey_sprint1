@@ -53,11 +53,28 @@ window.addEventListener("DOMContentLoaded", function() {
 
 
     //Add to Order button (Menu Page):
-    // let addtoOrdBtn = document.querySelector("#addtoOrdBtn");
-    // addtoOrdBtn.addEventListener("click", function() {
-    //     //On click, try to go back to the element with the name of the item and add it to ordList in localStorage.
-    //     //let ordItem = addtoOrdBtn.previousSibling;
-    // });
+    let addToOrdBtn = document.querySelectorAll(".addToOrdBtn");
+    
+    for (btn of addToOrdBtn) {
+        btn.addEventListener("click", function(e) {
+            //On click, add the value of the button clicked to ordList in localStorage.
+            
+            console.log(this.value);
+            if (localStorage.getItem("ordList") === null) {
+                let ordList = [];
+                ordList.push(this.value);
+                localStorage.setItem("ordList", JSON.stringify(ordList));
+                
+            } else {
+                let ordList = JSON.parse(localStorage.getItem("ordList"));
+                ordList.push(this.value);
+                localStorage.setItem("ordList", JSON.stringify(ordList));
+                
+            }
+
+            e.preventDefault();
+        });
+    }
 
 
     //Ordering Page:
