@@ -4,15 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Online Ordering</title>
-    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/ordering.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Jacques Francois"
       rel="stylesheet"
     />
     <script src="../scripts/script.js"></script>
   </head>
-  <body>
-    <h1>Welcome to Sunny Bites Café</h1>
+  <div class="grid-container">
+    <body>
+      <div class="grid-header">
+        <header>
+          <img src="../images/Banner.jpg"
+          alt="our cafe" />
+        </header>
+      </div>
+
+      <div class="grid-navleft">
+        <nav>
+          <a href="index.html">Home</a>
+      </div>
+
+      <div class="grid-navright">
+        <a href="menu.html">Menu</a>
+        </nav>
+      </div>
 
     <!-- Form for script testing, feel free to remove. -->
      <form id="oForm">
@@ -22,7 +38,6 @@
         <label for="oName">Full Name:</label>
 
         <input type="text" name="oName" id="oName">
-      </div>
 
       <div>
         <label for="oPhone">Phone Number:</label>
@@ -93,5 +108,9 @@
         <input type="submit" value="Submit Order">
       </div>
      </form>
+
+     <footer>
+      © 2025 Sunny Bites Café
+    </footer>
   </body>
 </html>
