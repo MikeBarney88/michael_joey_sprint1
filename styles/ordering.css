@@ -22,36 +22,40 @@ body {
   border: 3px solid #ffc300;
 }
 
-.grid-header {
+header {
   display: grid;
   grid-column: 1 / -1;
   grid-row: 1 / 2;
 }
 
-.grid-navleft {
+/* Stopped here! */
+
+nav {
   display: grid;
-  grid-column: 2/3;
-  grid-row: 2/3;
-  padding: 15px 0px 15px 0px;
-  border: 1px solid black;
+  grid-column: 1/-1;
+  grid-row: auto;
   border-radius: 10px;
-  background-color: lightgray;
   justify-items: center;
+  justify-content: space-around;
   font-size: 1.6em;
   margin-top: 15px;
+}
+.grid-navleft {
+  display: grid;
+  grid-column: auto;
+  grid-row: 2/3;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 15px 0px 15px 0px;
 }
 
 .grid-navright {
   display: grid;
-  grid-column: 4/5;
+  grid-column: auto;
   grid-row: 2/3;
-  background-color: lightgray;
-  padding: 15px 0px 15px 0px;
   border: 1px solid black;
   border-radius: 10px;
-  justify-items: center;
-  font-size: 1.6em;
-  margin-top: 15px;
+  padding: 15px 0px 15px 0px;
 }
 
 a:link,
