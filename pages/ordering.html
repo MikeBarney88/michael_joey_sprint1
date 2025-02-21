@@ -31,84 +31,85 @@
       </div>
 
     <!-- Form for script testing, feel free to remove. -->
-     <form id="oForm">
-      <div id="oError">&nbsp;</div>
-
-      <div>
-        <label for="oName">Full Name:</label>
-
-        <input type="text" name="oName" id="oName">
-
-      <div>
-        <label for="oPhone">Phone Number:</label>
-
-        <input type="text" name="oPhone" id="oPhone" placeholder="(###) ###-####">
-      </div>
-
-      <div>
-        <label for="oAddress">Delivery Address:</label>
-
-        <input type="text" name="oAddress" id="oAddress">
-      </div>
-
-      <div>
-        <label for="oCredit">Credit Card:</label>
-
-        <input type="text" name="oCredit" id="oCredit" placeholder="####-####-####-####">
-      </div>
-
-      <div>
-        <p>Your Order:</p>
+     <div class="grid-form">
+      <form id="oForm">
+        <div id="oError">&nbsp;</div>
 
         <div>
-          <label for="oItemPick">Choose Item(s):</label>
-          
-          <br>
+          <label for="oName">Full Name:</label>
 
-          <select name="oItemPick" id="oItemPick">
-            <option selected disabled value="defaultPick">-- Menu Options --</option>
-            <optgroup label="Breakfast">
-              <option value="crepe">Breakfast Crêpe</option>
-              <option value="eoat">Eggs on Avacado Toast</option>
-              <option value="smoothie">Smoothie Bowl</option>
-            </optgroup>
+          <input type="text" name="oName" id="oName">
 
-            <optgroup label="Lunch">
-              <option value="salad">Garden Salad</option>
-              <option value="bagel">Bagel Sandwich</option>
-              <option value="ramen">Bowl of Ramen</option>
-            </optgroup>
+        <div>
+          <label for="oPhone">Phone Number:</label>
 
-            <optgroup label="Beverages">
-              <option value="coffee">Coffee</option>
-              <option value="mocha">Café Mocha Latte</option>
-              <option value="herbal">Herbal Tea</option>
-            </optgroup>
-          </select>
-
-          <input type="number" min="1" placeholder="Quantity" id="oQuantity">
-
-          <button id="oFormATO">Add to Order</button>
+          <input type="text" name="oPhone" id="oPhone" placeholder="(###) ###-####">
         </div>
 
-        <ul id="ordDsp"></ul>
-      </div>
+        <div>
+          <label for="oAddress">Delivery Address:</label>
 
-      <div>
-        <p id="oSubtotal"></p>
-        <p id="oHST"></p>
-        <p id="oTotal"></p>
-      </div>
+          <input type="text" name="oAddress" id="oAddress">
+        </div>
 
-      <div>
-        <button id="oCalc">Calculate Total</button>
-      </div>
+        <div>
+          <label for="oCredit">Credit Card:</label>
 
-      <div>
-        <input type="submit" value="Submit Order">
-      </div>
-     </form>
+          <input type="text" name="oCredit" id="oCredit" placeholder="####-####-####-####">
+        </div>
 
+        <div>
+          <p>Your Order:</p>
+
+          <div>
+            <label for="oItemPick">Choose Item(s):</label>
+            
+            <br>
+
+            <select name="oItemPick" id="oItemPick">
+              <option selected disabled value="defaultPick">-- Menu Options --</option>
+              <optgroup label="Breakfast">
+                <option value="crepe">Breakfast Crêpe</option>
+                <option value="eoat">Eggs on Avacado Toast</option>
+                <option value="smoothie">Smoothie Bowl</option>
+              </optgroup>
+
+              <optgroup label="Lunch">
+                <option value="salad">Garden Salad</option>
+                <option value="bagel">Bagel Sandwich</option>
+                <option value="ramen">Bowl of Ramen</option>
+              </optgroup>
+
+              <optgroup label="Beverages">
+                <option value="coffee">Coffee</option>
+                <option value="mocha">Café Mocha Latte</option>
+                <option value="herbal">Herbal Tea</option>
+              </optgroup>
+            </select>
+
+            <input type="number" min="1" placeholder="Quantity" id="oQuantity">
+
+            <button id="oFormATO">Add to Order</button>
+          </div>
+
+          <ul id="ordDsp"></ul>
+        </div>
+
+        <div>
+          <p id="oSubtotal"></p>
+          <p id="oHST"></p>
+          <p id="oTotal"></p>
+        </div>
+
+        <div>
+          <button id="oCalc">Calculate Total</button>
+        </div>
+
+        <div>
+          <input type="submit" value="Submit Order">
+        </div>
+      </form>
+    </div>
      <footer>
       © 2025 Sunny Bites Café
     </footer>

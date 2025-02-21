@@ -84,7 +84,7 @@ a:hover {
 
 .grid-visitus {
   display: grid;
-  grid-column: 2 / 5;
+  grid-column: 2 / 3;
   grid-row: 5 / 6;
   justify-content: center;
   padding-top: 50px;
@@ -92,10 +92,9 @@ a:hover {
 
 .grid-visitustxt {
   display: grid;
-  grid-column: 2 / 5;
+  grid-column: 2 / 3;
   grid-row: 6 / 7;
   justify-content: center;
-  padding-left: 50px;
 }
 
 .font {
@@ -105,19 +104,58 @@ a:hover {
 
 .grid-review {
   display: grid;
-  grid-column: 2 / 5;
-  grid-row: 7 / 8;
+  grid-column: 3 / 6;
+  grid-row: 5 / 6;
   justify-content: center;
   padding-top: 50px;
 }
 
 .grid-reviewtxt {
   display: grid;
-  grid-column: 2 / 5;
-  grid-row: 8 / 9;
+  grid-column: 3 / 6;
+  grid-row: 6 / 7;
   justify-content: center;
   padding-top: 10px;
-  padding-left: 50px;
+}
+
+.grid-blog {
+  display: grid;
+  grid-column: 2 / 5;
+  grid-row: auto;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.grid-item {
+  border: 1px groove grey;
+  border-radius: 10px;
+  box-shadow: 3px 3px #ffc300;
+  margin: auto;
+  margin: 40px;
+}
+
+.grid-blog1 {
+  grid-column: 2 / 3;
+  grid-row: auto;
+  text-align: center;
+  justify-content: center;
+  border-radius: 10px;
+  width: 320px;
+  height: 450px;
+  padding: 20px;
+  font-size: smaller;
+}
+
+.grid-blog2 {
+  grid-column: 4 / 5;
+  grid-row: auto;
+  text-align: center;
+  justify-content: center;
+  border-radius: 10px;
+  width: 320px;
+  height: 450px;
+  padding: 20px;
+  font-size: smaller;
 }
 
 footer {

@@ -66,6 +66,12 @@ a:hover {
   text-decoration: none;
 }
 
+.grid-form {
+  display: grid;
+  grid-column: 2/5;
+  grid-row: auto;
+}
+
 footer {
   display: grid;
   grid-column: 1/-1;
