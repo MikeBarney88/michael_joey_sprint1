@@ -52,6 +52,27 @@ window.addEventListener("DOMContentLoaded", function() {
     }
 
 
+    //Error handler (Menu Page):
+    function moopsie(message, type) {
+        let mError = document.querySelector("#mError");
+        mError.style.position = "fixed";
+        mError.style.textAlign = "center";
+        
+        if (type === "g") {
+            mError.style.backgroundColor = "lightgreen";
+        } else {
+            mError.style.backgroundColor = "red";
+        }
+        mError.innerHTML += message + "<br>";
+        
+
+        setTimeout(() => {
+            mError.style.backgroundColor = "";
+            mError.innerHTML = "";
+        } , 3000)
+    }
+
+
     //Add to Order button (Menu Page):
     let addToOrdBtn = document.querySelectorAll(".addToOrdBtn");
     
@@ -59,7 +80,6 @@ window.addEventListener("DOMContentLoaded", function() {
         btn.addEventListener("click", function(e) {
             //On click, add the value of the button clicked to ordList in localStorage.
             
-            console.log(this.value);
             if (localStorage.getItem("ordList") === null) {
                 let ordList = [];
                 ordList.push(this.value);
@@ -69,8 +89,9 @@ window.addEventListener("DOMContentLoaded", function() {
                 let ordList = JSON.parse(localStorage.getItem("ordList"));
                 ordList.push(this.value);
                 localStorage.setItem("ordList", JSON.stringify(ordList));
-                
             }
+
+            moopsie(`${this.parentElement.previousElementSibling.previousElementSibling.innerText} Successfully Added to Order.`, "g");
 
             e.preventDefault();
         });
@@ -103,6 +124,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
         e.preventDefault();
     });
+
 
     //Update order and set up choose items field:
 
@@ -170,7 +192,6 @@ window.addEventListener("DOMContentLoaded", function() {
     }, 500);
 
 
-
     //Order totals/calculations:
     let oCalc = document.querySelector("#oCalc");
     oCalc.addEventListener("click", function(e) {
@@ -181,6 +202,26 @@ window.addEventListener("DOMContentLoaded", function() {
         } else {
             oopsie("Cannot Calculate Total With Empty Order.", "b");
         }
+
+        e.preventDefault();
+    });
+
+
+    //Reset order option.
+    document.querySelector("#oForm").addEventListener("reset", function(e) {
+        document.querySelector("#oName").value = "";
+        document.querySelector("#oPhone").value = "";
+        document.querySelector("#oAddress").value = "";
+        document.querySelector("#oCredit").value = "";
+
+        document.querySelector("#oItemPick").value = "defaultPick";
+        document.querySelector("#oQuantity").value = "";
+        if (document.querySelector("#oQuantity").setAttribute("required", true)) {
+            document.querySelector("#oQuantity").setAttribute("required", false);
+        }
+
+        localStorage.clear();
+        document.querySelector("#ordDsp").innerHTML = "";
 
         e.preventDefault();
     });
