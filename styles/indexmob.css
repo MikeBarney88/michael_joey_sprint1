@@ -9,21 +9,21 @@ Date: Feb 17 -
 }
 
 body {
-    margin: 0;
-    border: 0.1rem solid #ffc300;
+  margin: 0;
+  border: 0.1rem solid #ffc300;
 }
 
 /*Within Body*/
 header img {
-    width: 100%;
-    opacity: 0;
+  width: 100%;
+  opacity: 0;
 }
 
 .grid-header {
-    background-image: url("../images/bannermob.jpg");
-    width: 100%;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+  background-image: url("../images/bannermob.jpg");
+  width: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 nav {
     display: flex;
