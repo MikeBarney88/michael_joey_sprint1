@@ -94,6 +94,7 @@ main {
   justify-items: center;
   font-size: large;
   padding-top: 20px;
+  padding-bottom: 10px;
   border: 1px solid black;
   border-radius: 10px;
 }
