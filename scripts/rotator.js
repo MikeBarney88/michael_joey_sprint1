@@ -41,5 +41,5 @@ window.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    setInterval(switchem, 5000);
+    setInterval(switchem, 3000);
 });
