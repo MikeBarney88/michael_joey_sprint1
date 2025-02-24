@@ -4,6 +4,10 @@ Members: Michael Barney, Joey Thomas
 Date: Feb 17 - 
 */
 
+* {
+    font-family: "Jacques Francois";
+}
+
 body {
     margin: 0;
     border: 0.1rem solid #ffc300;
@@ -25,7 +29,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 10px;
+    margin-top: 1.5%;
     width: 100%;
 }
     .grid-navleft a:link, a:visited{
@@ -33,7 +37,8 @@ nav {
         background-color: black;
         text-decoration: none;
         font-size: 1.5rem;
-        padding: 2px 50px 2px 50px;
+        padding: 0.2rem 3.3rem 0.2rem 3.3rem;
+        margin: 1.5%;
         border-radius: 3px;
     }
     .grid-navright a:link, a:visited {
@@ -41,6 +46,21 @@ nav {
         background-color: black;
         text-decoration: none;
         font-size: 1.5rem;
-        padding: 2px 35px 2px 35px;
+        padding: 0.2rem 2.1rem 0.2rem 2.1rem;
+        margin: 1.5%;
         border-radius: 3px;
     }
+
+    .grid-navleft a:hover,
+    .grid-navright a:hover {
+        background-color: #C39500;
+        color: black;
+    }
+
+
+.grid-aboutus {
+    background-color: black;
+    text-align: center;
+    color: #C39500;
+
+}

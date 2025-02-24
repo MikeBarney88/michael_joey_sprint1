@@ -30,7 +30,7 @@ window.addEventListener("DOMContentLoaded", function() {
     }
 
     //Error handler:
-    function oopsie(message, type) {
+    function oopsie(message, type, tb = "") {
         let oError = document.querySelector("#oError");
         if (type === "g") {
             oError.style.backgroundColor = "lightgreen";
@@ -40,10 +40,29 @@ window.addEventListener("DOMContentLoaded", function() {
 
         oError.innerHTML = message;
 
-        document.querySelector("#oName").value = "";
-        document.querySelector("#oPhone").value = "";
-        document.querySelector("#oAddress").value = "";
-        document.querySelector("#oCredit").value = "";
+        if (tb === "top") {
+            document.querySelector("#oName").value = "";
+            document.querySelector("#oPhone").value = "";
+            document.querySelector("#oAddress").value = "";
+            document.querySelector("#oCredit").value = "";
+        } else if (tb === "bot") {
+            document.querySelector("#oItemPick").value = "defaultPick";
+            document.querySelector("#oQuantity").value = "";
+            if (document.querySelector("#oQuantity").hasAttribute("required")) {
+                document.querySelector("#oQuantity").removeAttribute("required");
+            }
+        } else {
+            document.querySelector("#oName").value = "";
+            document.querySelector("#oPhone").value = "";
+            document.querySelector("#oAddress").value = "";
+            document.querySelector("#oCredit").value = "";
+
+            document.querySelector("#oItemPick").value = "defaultPick";
+            document.querySelector("#oQuantity").value = "";
+            if (document.querySelector("#oQuantity").hasAttribute("required")) {
+                document.querySelector("#oQuantity").removeAttribute("required");
+            }
+        }
 
         setTimeout(() => {
             oError.style.backgroundColor = "";
@@ -105,12 +124,12 @@ window.addEventListener("DOMContentLoaded", function() {
         let oPhone = document.querySelector("#oPhone").value;
         let oAddress = document.querySelector("#oAddress").value;
         let oCredit = document.querySelector("#oCredit").value;
-        if (oName === "" || oPhone === "" || oAddress === "" || oCredit === "" || (document.querySelector("#oQuantity").hasAttribute("required") && document.querySelector("#oQuantity").value === "")) {
+        if (oName === "" || oPhone === "" || oAddress === "" || oCredit === "" || (document.querySelector("#oQuantity").hasAttribute("required") === true && document.querySelector("#oQuantity").value === "")) {
             oopsie("Please Fill All Fields.", "b");
         } else if (!/\(?\d{3}\)?[\s-]?\d{3}[\s-]?\d{4}/.test(oPhone)) {
-            oopsie("Invalid Phone Number Format.", "b");
+            oopsie("Invalid Phone Number Format.", "b", "top");
         } else if (!/\d{4}-\d{4}-\d{4}-\d{4}/.test(oCredit)) {
-            oopsie("Invalid Credit Card Format.", "b");
+            oopsie("Invalid Credit Card Format.", "b", "top");
         } else {
             oopsie("Thank You For Your Order!", "g");
             
@@ -121,6 +140,14 @@ window.addEventListener("DOMContentLoaded", function() {
                 localStorage.setItem("oCust", JSON.stringify(oCust));
             }
         }
+
+        localStorage.removeItem("ordList");
+
+        document.querySelector("#oSubtotal").innerText = "";
+        document.querySelector("#oHST").innerText = "";
+        document.querySelector("#oTotal").innerText = "";
+
+        document.querySelector("#ordDsp").innerHTML = "";
 
         e.preventDefault();
     });
@@ -138,8 +165,8 @@ window.addEventListener("DOMContentLoaded", function() {
     document.querySelector("#oFormATO").addEventListener("click", oAdder);
     
     function oAdder(e) {
-        if (document.querySelector("#oItemPick").value === "defaultPick" || document.querySelector("#oQuantity").value === "") {
-            oopsie("Please Choose a Menu Item and Quantity.", "b");
+        if ((document.querySelector("#oItemPick").value != "defaultPick" && document.querySelector("#oQuantity").value === "") || (document.querySelector("#oItemPick").value === "defaultPick" && document.querySelector("#oQuantity").value === "")) {
+            oopsie("Please Choose a Menu Item and Quantity.", "b", "bot");
         } else {
             
             let oItems = [];
@@ -156,7 +183,7 @@ window.addEventListener("DOMContentLoaded", function() {
                 document.querySelector("#oQuantity").setAttribute("required", false); 
                 document.querySelector("#oQuantity").value = "";
                 
-                oopsie("Item Added to Order.", "g");
+                oopsie("Item Added to Order.", "g", "bot");
             } else {
                 let ordList = JSON.parse(localStorage.getItem("ordList"));
                 oItems.forEach((item) => {ordList.push(item)});
@@ -165,7 +192,7 @@ window.addEventListener("DOMContentLoaded", function() {
                 document.querySelector("#oQuantity").setAttribute("required", false); 
                 document.querySelector("#oQuantity").value = "";
                 
-                oopsie("Item Added to Order.", "g");
+                oopsie("Item Added to Order.", "g", "bot");
             }
         }
 
@@ -207,7 +234,7 @@ window.addEventListener("DOMContentLoaded", function() {
     });
 
 
-    //Reset order option.
+    //Reset order option:
     document.querySelector("#oForm").addEventListener("reset", function(e) {
         document.querySelector("#oName").value = "";
         document.querySelector("#oPhone").value = "";
@@ -216,13 +243,15 @@ window.addEventListener("DOMContentLoaded", function() {
 
         document.querySelector("#oItemPick").value = "defaultPick";
         document.querySelector("#oQuantity").value = "";
-        if (document.querySelector("#oQuantity").setAttribute("required", true)) {
-            document.querySelector("#oQuantity").setAttribute("required", false);
-        }
+        document.querySelector("#oQuantity").removeAttribute("required");
 
         localStorage.clear();
         document.querySelector("#ordDsp").innerHTML = "";
 
+        document.querySelector("#oSubtotal").innerText = "";
+        document.querySelector("#oHST").innerText = "";
+        document.querySelector("#oTotal").innerText = "";
+        subtotal = 0;
         e.preventDefault();
     });
 
