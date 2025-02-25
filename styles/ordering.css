@@ -54,8 +54,8 @@ nav {
   margin-top: 15px;
 }
 
-a:link,
-a:visited {
+nav a:link,
+nav a:visited {
   background-color: lightgray;
   color: black;
   text-decoration: none;
@@ -64,13 +64,14 @@ a:visited {
   border-radius: 10px;
 }
 
-a:hover {
+nav a:hover {
   color: #ffc300;
   text-decoration: none;
   padding: 15px 60px 15px 60px;
   border: 1px solid black;
   border-radius: 10px;
 }
+
 main {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -146,12 +147,40 @@ li {
 
 footer {
   display: grid;
+  grid-template-columns: repeat(5, 1fr);
   grid-column: 1/-1;
   grid-row: auto;
   color: #ffc300;
   font-size: x-large;
-  margin-top: 30px;
   padding: 20px;
   justify-content: center;
   background-color: black;
+}
+
+.footer-left {
+  display: grid;
+  grid-column: 1/3;
+  text-align: left;
+  background-color: black;
+  padding-left: 20px;
+}
+
+.footer-right {
+  grid-column: 4/6;
+  grid-row: 1/2;
+  background-color: black;
+  text-align: right;
+}
+
+.footer-right a:link,
+a:visited {
+  background-color: black;
+  padding: 10px;
+  color: black;
+}
+
+.footer-right a:hover {
+  background-color: black;
+  color: black;
+  padding: 10px;
 }
