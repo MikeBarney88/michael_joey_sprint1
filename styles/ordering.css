@@ -17,7 +17,7 @@ body {
   display: grid;
   width: 1512px;
   margin: auto;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-template-rows: minmax(40px, auto);
   border: 3px solid #ffc300;
 }
@@ -100,25 +100,6 @@ main {
   border-radius: 10px;
 }
 
-/* .grid-formleft {
-  display: grid;
-  grid-column: 1/2;
-  grid-row: 1/2;
-}
-
-.grid-formright {
-  display: grid;
-  grid-column: 2/3;
-  grid-row: 1/2;
-}
-
-.grid-formbottom {
-  display: grid;
-  grid-column: auto;
-  grid-row: auto;
-  justify-content: center;
-} */
-
 input {
   font-size: larger;
   margin-right: 20px;
@@ -153,6 +134,7 @@ footer {
   color: #ffc300;
   font-size: x-large;
   padding: 20px;
+  margin-top: 20px;
   justify-content: center;
   background-color: black;
 }

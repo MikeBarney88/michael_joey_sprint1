@@ -68,6 +68,15 @@ nav a:hover {
   border-radius: 10px;
 }
 
+#mError {
+  top: 20px;
+  left: 500px;
+  right: 500px;
+  border: 1px solid black;
+  border-radius: 8px;
+  text-align: center;
+}
+
 main {
   display: grid;
   grid-template-columns: repeat(5, 1fr);

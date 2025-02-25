@@ -22,110 +22,111 @@ header img {
   background-repeat: no-repeat;
 }
 nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    font-family: "Jacques Francois";
-    margin-top: 4%;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-family: "Jacques Francois";
+  margin-top: 4%;
+  width: 100%;
 }
-    .grid-navleft a:link, a:visited{
-        color: #C39500;
-        background-color: black;
-        text-decoration: none;
-        font-size: 1.5rem;
-        padding: 0.2rem 3.3rem 0.2rem 3.3rem;
-        margin: 1.5%;
-        border-radius: 3px;
-    }
-    .grid-navright a:link, a:visited {
-        color: #C39500;
-        background-color: black;
-        text-decoration: none;
-        font-size: 1.5rem;
-        padding: 0.2rem 2.1rem 0.2rem 2.1rem;
-        margin: 1.5%;
-        border-radius: 3px;
-    }
+.grid-navleft a:link,
+a:visited {
+  color: #c39500;
+  background-color: black;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 0.2rem 3.3rem 0.2rem 3.3rem;
+  margin: 1.5%;
+  border-radius: 3px;
+}
+.grid-navright a:link,
+a:visited {
+  color: #c39500;
+  background-color: black;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 0.2rem 2.1rem 0.2rem 2.1rem;
+  margin: 1.5%;
+  border-radius: 3px;
+}
 
-    .grid-navleft a:hover,
-    .grid-navright a:hover {
-        background-color: #C39500;
-        color: black;
-    }
-
+.grid-navleft a:hover,
+.grid-navright a:hover {
+  background-color: #c39500;
+  color: black;
+}
 
 .grid-aboutus {
-    width: 100%;
-    background-color: black;
-    text-align: center;
-    font-family: "Jacques Francois";
-    color: #C39500;
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  font-family: "Jacques Francois";
+  color: #c39500;
 }
-    .grid-aboutustxt {
-        padding: 0% 1% 1% 1%;
-        font-family: "Jacques Francois";
-        line-height: 170%;
-    }
+.grid-aboutustxt {
+  padding: 0% 1% 1% 1%;
+  font-family: "Jacques Francois";
+  line-height: 170%;
+}
 
 .grid-visitus {
-    width: 100%;
-    background-color: black;
-    text-align: center;
-    font-family: "Jacques Francois";
-    color: #C39500;
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  font-family: "Jacques Francois";
+  color: #c39500;
 }
-    .grid-visitustxt {
-        padding: 0% 1% 1% 1%;
-        font-family: "Jaldi";
-        line-height: 170%;
-        font-size: 1.3rem;
-    }
+.grid-visitustxt {
+  padding: 0% 1% 1% 1%;
+  font-family: "Jaldi";
+  line-height: 170%;
+  font-size: 1.3rem;
+}
 
 .grid-review {
-    width: 100%;
-    background-color: black;
-    text-align: center;
-    font-family: "Jacques Francois";
-    font-size: 0.9rem;
-    color: #C39500;
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  font-family: "Jacques Francois";
+  font-size: 0.9rem;
+  color: #c39500;
 }
-    .grid-reviewtxt {
-        font-family: "Jacques Francois";
-        width: 100%;
-        height: 10vh;
-    }
+.grid-reviewtxt {
+  font-family: "Jacques Francois";
+  width: 100%;
+  height: 10vh;
+}
 
 .grid-blog {
-    width: 100%;
-    background-color: black;
-    text-align: center;
-    font-family: "Jacques Francois";
-    font-size: 0.9rem;
-    color: #C39500;
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  font-family: "Jacques Francois";
+  font-size: 0.9rem;
+  color: #c39500;
 }
-    .grid-blog1 {
-        text-align: center;
-        border-radius: 10px;
-        padding: 1.5rem;
-        font-size: 1.544rem;
-        border: 0.2rem groove grey;
-        border-radius: 1rem;
-        box-shadow: 3px 3px #ffc300;
-        margin: auto;
-        margin: 5%;
-    }
-    .grid-blog2 {
-        text-align: center;
-        border-radius: 1rem;
-        padding: 1.5rem;
-        font-size: 1.6rem;
-        border: 0.2rem groove grey;
-        border-radius: 10px;
-        box-shadow: 3px 3px #ffc300;
-        margin: auto;
-        margin: 5%;
-    }
+.grid-blog1 {
+  text-align: center;
+  border-radius: 10px;
+  padding: 1.5rem;
+  font-size: 1.544rem;
+  border: 0.2rem groove grey;
+  border-radius: 1rem;
+  box-shadow: 3px 3px #ffc300;
+  margin: auto;
+  margin: 5%;
+}
+.grid-blog2 {
+  text-align: center;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  border: 0.2rem groove grey;
+  border-radius: 10px;
+  box-shadow: 3px 3px #ffc300;
+  margin: auto;
+  margin: 5%;
+}
 
 footer {
   color: #ffc300;
@@ -133,4 +134,10 @@ footer {
   padding: 2rem;
   text-align: center;
   background-color: black;
+}
+footer a:link,
+footer a:visited,
+footer a:hover {
+  color: black;
+  padding: 5px;
 }
