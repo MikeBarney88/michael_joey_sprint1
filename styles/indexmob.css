@@ -4,10 +4,6 @@ Members: Michael Barney, Joey Thomas
 Date: Feb 17 - 
 */
 
-* {
-    font-family: "Jacques Francois";
-}
-
 body {
   margin: 0;
   border: 0.1rem solid #ffc300;
@@ -29,7 +25,8 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 1.5%;
+    font-family: "Jacques Francois";
+    margin-top: 4%;
     width: 100%;
 }
     .grid-navleft a:link, a:visited{
@@ -59,8 +56,81 @@ nav {
 
 
 .grid-aboutus {
+    width: 100%;
     background-color: black;
     text-align: center;
+    font-family: "Jacques Francois";
     color: #C39500;
+}
+    .grid-aboutustxt {
+        padding: 0% 1% 1% 1%;
+        font-family: "Jacques Francois";
+        line-height: 170%;
+    }
 
+.grid-visitus {
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    font-family: "Jacques Francois";
+    color: #C39500;
+}
+    .grid-visitustxt {
+        padding: 0% 1% 1% 1%;
+        font-family: "Jaldi";
+        line-height: 170%;
+        font-size: 1.3rem;
+    }
+
+.grid-review {
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    font-family: "Jacques Francois";
+    font-size: 0.9rem;
+    color: #C39500;
+}
+    .grid-reviewtxt {
+        font-family: "Jacques Francois";
+        width: 100%;
+        height: 10vh;
+    }
+
+.grid-blog {
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    font-family: "Jacques Francois";
+    font-size: 0.9rem;
+    color: #C39500;
+}
+    .grid-blog1 {
+        text-align: center;
+        border-radius: 10px;
+        padding: 1.5rem;
+        font-size: 1.544rem;
+        border: 0.2rem groove grey;
+        border-radius: 1rem;
+        box-shadow: 3px 3px #ffc300;
+        margin: auto;
+        margin: 5%;
+    }
+    .grid-blog2 {
+        text-align: center;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        font-size: 1.6rem;
+        border: 0.2rem groove grey;
+        border-radius: 10px;
+        box-shadow: 3px 3px #ffc300;
+        margin: auto;
+        margin: 5%;
+    }
+
+footer {
+  color: #ffc300;
+  font-size: 1rem;
+  padding: 2rem;
+  text-align: center;
+  background-color: black;
 }
