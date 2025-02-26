@@ -56,8 +56,8 @@ nav {
 
 nav a:link,
 nav a:visited {
-  background-color: lightgray;
-  color: black;
+  background-color: black;
+  color: #ffc300;
   text-decoration: none;
   padding: 15px 60px 15px 60px;
   border: 1px solid black;
