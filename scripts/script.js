@@ -84,6 +84,8 @@ window.addEventListener("DOMContentLoaded", function() {
             oopsie("Invalid Phone Number Format.", "b", "top");
         } else if (!/\d{4}-\d{4}-\d{4}-\d{4}/.test(oCredit)) {
             oopsie("Invalid Credit Card Format.", "b", "top");
+        } else if (localStorage.getItem("ordList") === null) {
+            oopsie("Cannot Submit an Empty Order.", "b", "bot");
         } else {
             oopsie("Thank You For Your Order!", "g");
             
@@ -206,6 +208,8 @@ window.addEventListener("DOMContentLoaded", function() {
         document.querySelector("#oHST").innerText = "";
         document.querySelector("#oTotal").innerText = "";
         subtotal = 0;
+
+        oopsie("Order and Form Cleared.", "g");
         e.preventDefault();
     });
 
