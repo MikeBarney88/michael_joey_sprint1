@@ -67,6 +67,7 @@ a:visited {
   color: #c39500;
 }
 
+
 .grid-form {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -74,15 +75,48 @@ a:visited {
   grid-row: 2/3;
   justify-items: center;
   font-size: large;
-  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 10px;
   border: 1px solid black;
   border-radius: 10px;
-  margin-bottom: 10px;
-  margin: 20px;
+}
+
+input {
+  font-size: larger;
+  margin-right: 20px;
+  align-items: center;
+  font-family: "Jaldi";
+  border-radius: 6px;
+}
+
+#oError,
+label,
+button,
+select,
+option,
+optgroup {
+  font-size: larger;
+  margin: 10px;
+  font-family: "Jaldi";
+  border-radius: 6px;
+}
+p,
+li {
+  font-family: "Jaldi";
+  font-size: larger;
+  padding-left: 20px;
+}
+
+form div input[name=oPhone] {
+  margin-left: 2.89vw;
+}
+form div input[name=oCredit] {
+  margin-left: 2.4vw;
 }
 
 footer {
   color: #ffc300;
+  margin-top: 3vh;
   font-size: 1rem;
   padding: 20px;
   text-align: center;
